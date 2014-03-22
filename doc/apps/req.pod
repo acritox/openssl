@@ -43,6 +43,8 @@ B<openssl> B<req>
 [B<-utf8>]
 [B<-nameopt>]
 [B<-reqopt>]
+[B<-resign>]
+[B<-rekey>]
 [B<-subject>]
 [B<-subj arg>]
 [B<-batch>]
@@ -134,6 +136,15 @@ Replaces subject field of input request with specified data and outputs
 modified request. The arg must be formatted as
 I</type0=value0/type1=value1/type2=...>,
 characters may be escaped by \ (backslash), no spaces are skipped.
+
+=item B<-resign>
+
+Re-signs the input request with private key B<-key>.
+
+=item B<-rekey>
+
+Uses private key B<-key> to create a different public key for existing
+certificate request.
 
 =item B<-rand file(s)>
 
